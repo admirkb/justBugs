@@ -1,6 +1,6 @@
 
 import { Meteor } from 'meteor/meteor';
-import {Bugs} from '../imports/api/bugs';
+import { Bugs } from '../imports/api/bugs';
 
 
 Meteor.publish('bugs', function () {
@@ -31,8 +31,17 @@ Meteor.methods({
     'bugs.update'(bugId, action) {
 
         //const bug = Bugs.findOne(bugId);
-        console.log(action)
+        // console.log(action)
         Bugs.update(bugId, action);
+        console.log(bugId)
+        var updatedBug = Bugs.find({ _id: 'cLMdZHc4XacK8ahGy' });
+        console.log(updatedBug.cursor.fetch())
+
+        var returnedBug = updatedBug.cursor.fetch();
+        //         return result;
+
+        return returnedBug;
+
     },
 
 

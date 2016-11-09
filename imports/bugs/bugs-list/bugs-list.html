@@ -3,22 +3,55 @@
 <!--<div [hidden]="user">You need to login to create new parties!</div>-->
 
 <br/>
-<h1 style="color:white;">bugs-list 3</h1>
-<table class="copy1">
-    <tr>
-        <td>
-            <div>
-                <table style="width:auto;white-space:nowrap">
+<h1 style="color:white;">bugs</h1>
+<billing></billing>
+
+<div *ngFor="let bug of bugs| async; let i = index">
+    <bugs-item [bugModel]="bug" [theIndex]="i"></bugs-item>
+</div>
+
+<billing></billing>
+
+<!--<table>-->
+<!--<tr>-->
+<!--<td>-->
+<!--<div>-->
+<!--<table style="width:100%;">-->
 
 
+<!--<tr >
+                        <td *ngFor="let bug of bugs | async; let i = index">
+                            <button>Button 1.0</button>
+
+                      
+                        </td>
+                    </tr>-->
+
+<!--<tr>-->
+<!--<td *ngFor="let bug of bugs | async; let i = index">-->
+<!--<bugs-item *ngFor="let bug of bugs| async; let i = index" [bugModel]="bug" [theIndex]="i"></bugs-item>-->
+
+
+<!--</td>-->
+<!--</tr>-->
+
+<!--</table>-->
+
+<!--</div>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<!--<div style="color:yellow; background:orange" *ngFor="let bug of bugs | async">
+    <bugs-item [bugModel]="bug" [theIndex]="i"></bugs-item>
+</div>-->
+<!--<div style="color:yellow; background:orange" *ngFor="let bug of bugs | async">xxx</div>-->
+
+
+
+<!--
                     <tr>
                         <td>
-                            <!--<bugs-item *ngFor="let bug of bugs; let i = index" [bugModel]="bug" [theIndex]="i"></bugs-item>-->
+                            <bugs-item *ngFor="let bug of bugs| async; let i = index" [bugModel]="bug" [theIndex]="i"></bugs-item>
                         </td>
-                    </tr>
-                </table>
-
-            </div>
-        </td>
-    </tr>
-</table>
+                    </tr>-->

@@ -1,16 +1,28 @@
-import {Bugs} from '../../imports/api/bugs';
+import { Bugs } from '../../imports/api/bugs';
 
 export function loadBugs() {
-    if (Bugs.find().count() === 0) {
+    if (Bugs.find().cursor.count() === 0) {
         var bugs = [
             {
                 'problem': 'Bug 1', editColor: 'transparent', dateCreated: new Date(),
             },
             {
+                'problem': 'Bug 2', editColor: 'transparent', dateCreated: new Date(),
+            },
+            {
                 'problem': 'Bug 3', editColor: 'transparent', dateCreated: new Date(),
             },
             {
-                'problem': 'bug 5', editColor: 'transparent', dateCreated: new Date(),
+                'problem': 'Bug 4', editColor: 'transparent', dateCreated: new Date(),
+            },
+            {
+                'problem': 'Bug 5', editColor: 'transparent', dateCreated: new Date(),
+            },
+            {
+                'problem': 'Bug 6', editColor: 'transparent', dateCreated: new Date(),
+            },
+            {
+                'problem': 'bug 7', editColor: 'transparent', dateCreated: new Date(),
             }
         ];
 
@@ -19,18 +31,20 @@ export function loadBugs() {
         }
     }
 
+    console.log(Bugs.find().cursor.count())
+
 };
 // let tempID = Session.set('tempID', 'myId' + new Date().getTime());
 let tempID = new Date().getTime();
 export function getTempId() {
 
-return tempID;
+    return tempID;
 
 };
 
 export function setTempId() {
 
-tempID = new Date().getTime();
- console.log(tempID);
+    tempID = new Date().getTime();
+    console.log(tempID);
 
 };

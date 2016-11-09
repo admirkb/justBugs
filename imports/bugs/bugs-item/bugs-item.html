@@ -3,15 +3,23 @@
 </td>-->
 
 <!--[ngStyle]="{  'background': bugModel.editColor }"-->
+
+
+
+<div style="color:yellow;" [innerHTML]="x3.theTime"></div>
+<div style="color:orange;" [innerHTML]="x3.theCount"></div>
+<div style="color:green;" [innerHTML]="_clientActivated"></div>
+
+
 <table>
     <tr *ngIf="theIndex == 0">
-        <th style="text-align:left;">Problem</th>
-        <th style="text-align:left;">Response</th>
-        <th style="text-align:left;">Date Created</th>
-        <th style="text-align:left;">Date Answered</th>
+        <th style="text-align:left;color:white;">Problem</th>
+        <th style="text-align:left;color:white;">Response</th>
+        <th style="text-align:left;color:white;">Date Created</th>
+        <th style="text-align:left;color:white;">Date Answered</th>
         <th></th>
     </tr>
-    <tr class="copy2" [ngStyle]="{  'background': bugModel.editColor }">
+    <tr class="copy2"  [style.background-color]="getStyle()">
         <td style="width:150px;">
             <input *ngIf="bugModel.isEditable" style="width:150px;color:black" [(ngModel)]="bugModel.problem" [disabled]="bugModel.isDisabled == null ? false : bugModel.isDisabled"
             />

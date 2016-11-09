@@ -6,10 +6,9 @@ import { Meteor } from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 
 // Angular
-import {Component, EventEmitter, OnInit, provide} from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
-import { provideRouter, RouterConfig, ROUTER_DIRECTIVES, Router } from '@angular/router';
+// import { provideRouter, RouterConfig, ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
